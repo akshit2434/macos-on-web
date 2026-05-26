@@ -1,0 +1,45 @@
+export const settingsContent = {
+  deviceName: "Demo MacBook Pro",
+  profileName: "Demo User",
+  appleId: "demo.user@example.com",
+  sections: [
+    { id: "wifi", label: "Wi-Fi", group: "network" },
+    { id: "bluetooth", label: "Bluetooth", group: "network" },
+    { id: "notifications", label: "Notifications", group: "apps" },
+    { id: "sound", label: "Sound", group: "system" },
+    { id: "wallpaper", label: "Wallpaper", group: "system" },
+    { id: "face-id", label: "Face ID", group: "privacy" },
+    { id: "battery", label: "Battery", group: "system" },
+    { id: "privacy", label: "Privacy & Security", group: "privacy" },
+    { id: "general", label: "General", group: "system" },
+    { id: "storage", label: "Storage", group: "system" },
+    { id: "permissions", label: "App Permissions", group: "privacy" },
+  ],
+  networks: ["Studio Fiber", "Guest Mesh", "Demo Hotspot"],
+  bluetoothDevices: ["Wireless Earbuds", "Trackpad", "Test Phone"],
+  notificationApps: ["Chat", "Calendar", "Gallery", "Jukebox"],
+  permissions: [
+    ["Camera", "Camera"],
+    ["Microphone", "Chat"],
+    ["Photos", "Gallery, Camera"],
+    ["Location", "Weather"],
+  ],
+  storage: [
+    ["System Data", 34, "#64748b"],
+    ["Photos", 22, "#ec4899"],
+    ["Music", 18, "#22c55e"],
+    ["Documents", 11, "#0ea5e9"],
+  ],
+  wallpapers: [
+    {
+      id: "dawn",
+      name: "Dawn Gradient",
+      src: "/wallpapers/dawn.svg",
+    },
+    {
+      id: "studio",
+      name: "Studio Grid",
+      src: "/wallpapers/studio.svg",
+    },
+  ],
+};

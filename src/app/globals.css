@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --font-apple-system: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-apple-system);
+  --font-mono: "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-apple-system);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.font-sans {
+  font-family: var(--font-apple-system) !important;
+}
+
+* {
+  box-sizing: border-box;
+  cursor: default;
+}
+
+button,
+[role="button"],
+label,
+select,
+summary {
+  cursor: pointer;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+  cursor: text;
+  user-select: text;
+}
+
+.selectable {
+  user-select: text;
+}
+
+.notes-editor ul:not(.notes-checklist) {
+  list-style: disc;
+  margin: 0.45rem 0 0.45rem 1.15rem;
+  padding-left: 1.15rem;
+}
+
+.notes-editor ol {
+  list-style: decimal;
+  margin: 0.45rem 0 0.45rem 1.15rem;
+  padding-left: 1.15rem;
+}
+
+.notes-editor li {
+  padding-left: 0.1rem;
+}
+
+.notes-checklist {
+  list-style: none;
+  margin: 0.45rem 0 0.45rem 0.05rem;
+  padding-left: 0;
+}
+
+.notes-check-row {
+  align-items: center;
+  border-radius: 0.35rem;
+  display: flex;
+  gap: 0.58rem;
+  margin: 0.18rem 0;
+  min-height: 1.75rem;
+  padding: 0.05rem 0;
+}
+
+.notes-check {
+  background: #fffdf8;
+  border: 1.4px solid rgba(100, 116, 139, 0.62);
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-grid;
+  flex: 0 0 auto;
+  height: 1.05rem;
+  place-items: center;
+  width: 1.05rem;
+}
+
+.notes-check-row[data-checked="true"] .notes-check {
+  background: #f6bf26;
+  border-color: #f6bf26;
+}
+
+.notes-check-row[data-checked="true"] .notes-check::after {
+  border-bottom: 2px solid #fffdf8;
+  border-right: 2px solid #fffdf8;
+  content: "";
+  height: 0.55rem;
+  transform: rotate(45deg) translateY(-1px);
+  width: 0.3rem;
+}
+
+.notes-check:focus-visible {
+  outline: 2px solid rgba(0, 122, 255, 0.65);
+  outline-offset: 2px;
+}
+
+.notes-check-text {
+  min-width: 1ch;
+  outline: none;
+}
+
+.notes-check-row[data-checked="true"] .notes-check-text {
+  color: #64748b;
+  text-decoration: line-through;
+}
+
+@keyframes zip-complete-card {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.92);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.015);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes zip-confetti {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.5) rotate(0deg);
+  }
+  14% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--zip-confetti-x), var(--zip-confetti-y), 0) scale(1) rotate(220deg);
+  }
+}
+
+@keyframes arrow-denied {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  22% {
+    transform: translateX(-4px);
+  }
+  45% {
+    transform: translateX(4px);
+  }
+  68% {
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes arrow-heart-spend {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  36% {
+    opacity: 1;
+    transform: scale(1.28) rotate(-8deg);
+  }
+  100% {
+    opacity: 0.45;
+    transform: scale(0.78) rotate(8deg);
+  }
+}
+
+@keyframes wordle-invalid {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  16% {
+    transform: translateX(-8px);
+  }
+  32% {
+    transform: translateX(7px);
+  }
+  48% {
+    transform: translateX(-5px);
+  }
+  64% {
+    transform: translateX(4px);
+  }
+  80% {
+    transform: translateX(-2px);
+  }
+}
