@@ -102,21 +102,37 @@ npm run e2e
 
 ![Lock screen](docs/screenshots/lock-screen.png)
 
-### Desktop Shell
+### Desktop Shell Overview
 
-![Desktop shell overview](docs/screenshots/desktop-shell.png)
+![Desktop shell overview](docs/screenshots/shell-overview.jpg)
+
+### Dock Hover State
+
+![Dock hover state](docs/screenshots/dock-hover.jpg)
 
 ### Notes App
 
-![Notes app](docs/screenshots/notes-app.png)
+![Notes app](docs/screenshots/notes-window.jpg)
 
-### Gallery App
+### Settings App
 
-![Gallery app](docs/screenshots/gallery-app.png)
+![Settings app](docs/screenshots/settings-window.jpg)
+
+### Calendar App
+
+![Calendar app](docs/screenshots/calendar-window.jpg)
 
 ### Music App With Lyrics
 
-![Music app with lyrics](docs/screenshots/music-lyrics.png)
+![Music app with lyrics](docs/screenshots/spotify-window.jpg)
+
+### Wordle Levels
+
+![Wordle levels](docs/screenshots/wordle-levels.jpg)
+
+### Zip Levels
+
+![Zip levels](docs/screenshots/zip-levels.jpg)
 
 ## Known Rough Edges
 
